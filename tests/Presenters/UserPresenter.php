@@ -1,6 +1,8 @@
 <?php
 
-namespace Coderflex\LaravelPresenter\Tests\Presenters;;
+namespace Coderflex\LaravelPresenter\Tests\Presenters;
+
+;
 
 use Coderflex\LaravelPresenter\Presenter;
 

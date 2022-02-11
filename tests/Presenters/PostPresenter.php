@@ -1,9 +1,11 @@
 <?php
 
-namespace Coderflex\LaravelPresenter\Tests\Presenters;;
+namespace Coderflex\LaravelPresenter\Tests\Presenters;
 
-use Illuminate\Support\Str;
+;
+
 use Coderflex\LaravelPresenter\Presenter;
+use Illuminate\Support\Str;
 
 class PostPresenter extends Presenter
 {
