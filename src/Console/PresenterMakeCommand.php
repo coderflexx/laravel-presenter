@@ -61,8 +61,8 @@ class PresenterMakeCommand extends GeneratorCommand
     protected function getDefaultNamespace($rootNamespace)
     {
         $configNamespace = config('laravel-presenter.presenter_namespace');
-        
-        return is_null($configNamespace) 
+
+        return is_null($configNamespace)
                 ? $rootNamespace . '\Presenters'
                 : $configNamespace;
     }
