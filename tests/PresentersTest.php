@@ -7,7 +7,7 @@ it('cannot create new eloquent model presenter', function () {
     $this->artisan('presenter:make ')
         ->assertExitCode(1);
 })->throws(
-    Symfony\Component\Console\Exception\RuntimeException::class, 
+    Symfony\Component\Console\Exception\RuntimeException::class,
     'Not enough arguments (missing: "name").'
 )->group('Presenter Command');
 
@@ -21,7 +21,7 @@ it('presents user full name', function () {
         'first_name' => 'John',
         'last_name' => 'Doe',
         'email' => 'john@example.com',
-        'password' => '123'
+        'password' => '123',
     ]);
 
     expect($user->present()->fullName)
@@ -30,7 +30,7 @@ it('presents user full name', function () {
 
 it('should implements CanPresent Interface', function () {
     $post = new Post([
-            'title' => 'a title for a post'
+            'title' => 'a title for a post',
         ]);
 
     $post->present()->slug;
@@ -38,5 +38,3 @@ it('should implements CanPresent Interface', function () {
     Coderflex\LaravelPresenter\Exceptions\PresenterException::class,
     'Coderflex\LaravelPresenter\Tests\Models\Post should implements \Coderflex\LaravelPresenter\Concerns\CanPresent interface'
 )->group('Presenter Implementation');
-
-
