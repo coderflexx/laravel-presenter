@@ -3,7 +3,7 @@
 use Coderflex\LaravelPresenter\Tests\Models\Post;
 use Coderflex\LaravelPresenter\Tests\Models\User;
 
-it('cannot create new eloquent model presenter', function () {
+it('cannot create new  presenter', function () {
     $this->artisan('presenter:make ')
         ->assertExitCode(1);
 })->throws(
@@ -11,7 +11,7 @@ it('cannot create new eloquent model presenter', function () {
     'Not enough arguments (missing: "name").'
 )->group('Presenter Command');
 
-it('can create new eloquent model presenter', function () {
+it('can create new  presenter', function () {
     $this->artisan('presenter:make UserPresenter')
         ->assertExitCode(0);
 })->group('Presenter Command');

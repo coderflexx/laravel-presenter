@@ -8,7 +8,7 @@ class PresenterMakeCommand extends GeneratorCommand
 {
     public $name = 'presenter:make';
 
-    public $description = 'create a new Eloquent model presenter';
+    public $description = 'create a new  presenter';
 
     /**
      * The type of class being generated.
