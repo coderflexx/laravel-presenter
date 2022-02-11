@@ -2,9 +2,9 @@
 
 namespace Coderflex\LaravelPresenter\Tests;
 
+use Coderflex\LaravelPresenter\LaravelPresenterServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Coderflex\LaravelPresenter\LaravelPresenterServiceProvider;
 
 class TestCase extends Orchestra
 {
