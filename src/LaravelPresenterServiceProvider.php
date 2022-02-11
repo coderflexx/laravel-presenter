@@ -18,7 +18,6 @@ class LaravelPresenterServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-presenter')
             ->hasConfigFile('laravel-presenter')
-            ->hasViews()
             ->hasCommand(PresenterMakeCommand::class);
     }
 }
