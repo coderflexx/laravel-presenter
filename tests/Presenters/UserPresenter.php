@@ -2,8 +2,6 @@
 
 namespace Coderflex\LaravelPresenter\Tests\Presenters;
 
-;
-
 use Coderflex\LaravelPresenter\Presenter;
 
 class UserPresenter extends Presenter
