@@ -1,10 +1,10 @@
-# This is my package laravel-presenter
+# Laravel Presenter
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/coderflex/laravel-presenter.svg?style=flat-square)](https://packagist.org/packages/coderflex/laravel-presenter)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/coderflex/laravel-presenter/run-tests?label=tests)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/coderflex/laravel-presenter/Check%20&%20fix%20styling?label=code%20style)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A clean way to present your model attributes without putting them in the worng file.
 
 ## Installation
 
