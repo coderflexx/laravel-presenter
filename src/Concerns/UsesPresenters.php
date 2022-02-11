@@ -13,7 +13,7 @@ trait UsesPresenters
      * Check the given presenters value exists or not
      *
      * @param string $type
-     * @return void
+     * @return mixed
      */
     public function present(string $type = 'default')
     {
