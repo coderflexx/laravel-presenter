@@ -1,10 +1,10 @@
 # Laravel Presenter
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/coderflex/laravel-presenter.svg?style=flat-square)](https://packagist.org/packages/coderflex/laravel-presenter)
+[![The Latest Version on Packagist](https://img.shields.io/packagist/v/coderflex/laravel-presenter.svg?style=flat-square)](https://packagist.org/packages/coderflex/laravel-presenter)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/coderflex/laravel-presenter/run-tests?label=tests)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/coderflex/laravel-presenter/Check%20&%20fix%20styling?label=code%20style)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 
-A clean way to present your model attributes without putting them in the worng file.
+A clean way to present your model attributes without putting them in the wrong file.
 
 ## Installation
 
@@ -42,9 +42,168 @@ return [
 ```
 
 ## Usage
+The implementation of this package is so simple, all what you need to do is the following:
 
-<!-- TODO: document the package usage -->
+## Model Implementation
 
+-  Implement `CanPresent` Interface 
+-  Use `UsesPresenters` Trait
+
+```php
+use Coderflex\LaravelPresenter\Concerns\CanPresent;
+use Coderflex\LaravelPresenter\Concerns\UsesPresenters;
+// ...
+
+class User extends Authenticatable implements CanPresent
+{
+    use UsesPresenters;
+
+    // ...
+}
+```
+
+## Create New Model Presenter class
+
+This package gives you an easy way to generate new `Presenter` class, all you need to do is to use `presenter:make` command.
+
+```bash
+php artisan presenter:make UserPresneter
+```
+
+`UserPresenter` in our case, leaves by default in `App\Presenters`.
+
+This is the contents of the `UserPresenter` file:
+
+```php
+<?php
+
+namespace App\Presenters;
+
+use Coderflex\LaravelPresenter\Presenter;
+
+class UserPresenter extends Presenter
+{
+    // 
+}
+
+```
+
+
+If you want to change the directory, you have two options.
+
+First options is to set the full namespace while you're creating the presenter class
+
+```bash
+php artisna presneter:make App\Models\Presenter\UserPresenter
+```
+
+Or change `presenter_namespace` from `config/laravel-presenter` file.
+
+```php
+return [
+    ...
+
+    'presenter_namespace'   => 'App\\Presenters',
+
+    ...
+];
+```
+
+## Using the `Presenter` Generated Class
+After you create the presenter class, you need to register it on the `Model` by adding the `$presenters` protected property:
+
+```php
+use App\Presenters\UserPresenter;
+use Coderflex\LaravelPresenter\Concerns\CanPresent;
+use Coderflex\LaravelPresenter\Concerns\UsesPresenters;
+// ...
+
+class User extends Authenticatable implements CanPresent
+{
+    use UsesPresenters;
+
+    protected $presenters = [
+        'default' => UserPresenter,
+    ];
+}
+```
+By default, the type of your presenter class is `default`, but you can use as many of presenters you want, just by identifying the type in `$presenters` property.
+
+## Example
+Now, after we generated the `presenter` class, and we implemented it successfully in our model, we can use it as so:
+
+In your `UserPresenter` class or any presenter class you generated.
+
+```php
+...
+class UserPresenter extends Presenter
+{
+    public function fullName()
+    {
+        return "{$this->model->first_name} {$this->model->last_name}";
+    }
+}
+...
+```
+
+We add a new method to present the `fullName`.
+
+In your blade or any place you want, you can do:
+
+```php
+$user->present()->fullName
+```
+Your application will show the full name from the method you added.
+
+## Adding Another Presenter Type:
+Like I said above, by default the type will be `deafult` but, you can add more types as you need.
+
+Here is an example:
+
+```php
+use App\Presenters\UserPresenter;
+use Coderflex\LaravelPresenter\Concerns\CanPresent;
+use Coderflex\LaravelPresenter\Concerns\UsesPresenters;
+// ...
+
+class User extends Authenticatable implements CanPresent
+{
+    use UsesPresenters;
+
+    protected $presenters = [
+        'default' => UserPresenter,
+        'setting' => UserSettingPresenter,
+    ];
+}
+```
+
+Generate new `UserSettingPresenter`
+
+```bash
+php artisan presenter:make UserSettingPresenter
+```
+
+Add anything to `UserSettingPresenter` method
+
+```php
+...
+class UserSettingPresenter extends Presenter
+{
+    public function lang()
+    {
+        return $this->model->settings->defaultLang;
+    }
+}
+...
+```
+
+Finally, set `setting` as a type:
+
+```php
+$user->present('setting')->lang;
+```
+
+By that, you can split your logic and make your code base even cleaner.
 
 ## Testing
 
