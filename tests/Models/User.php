@@ -4,7 +4,8 @@ namespace Coderflex\LaravelPresenter\Tests\Models;
 
 use Coderflex\LaravelPresenter\Concerns\CanPresent;
 use Coderflex\LaravelPresenter\Concerns\UsesPresenters;
-use Coderflex\LaravelPresenter\Tests\Presenters\{UserPresenter, UserSettingPresenter};
+use Coderflex\LaravelPresenter\Tests\Presenters\UserPresenter;
+use Coderflex\LaravelPresenter\Tests\Presenters\UserSettingPresenter;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model implements CanPresent
@@ -15,6 +16,6 @@ class User extends Model implements CanPresent
 
     protected $presenters = [
         'default' => UserPresenter::class,
-        'setting'   => UserSettingPresenter::class,
+        'setting' => UserSettingPresenter::class,
     ];
 }
