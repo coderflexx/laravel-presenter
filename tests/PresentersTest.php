@@ -28,6 +28,18 @@ it('presents user full name', function () {
         ->toEqual('John Doe');
 })->group('Presenter Implementation');
 
+it('presents user lang from another presenter type', function () {
+    $user = new User([
+        'first_name' => 'John',
+        'last_name' => 'Doe',
+        'email' => 'john@example.com',
+        'password' => '123',
+    ]);
+
+    expect($user->present('setting')->lang)
+        ->toEqual('en');
+})->group('Presenter Implementation');
+
 it('should implements CanPresent Interface', function () {
     $post = new Post([
             'title' => 'a title for a post',
