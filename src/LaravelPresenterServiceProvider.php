@@ -2,9 +2,9 @@
 
 namespace Coderflex\LaravelPresenter;
 
+use Coderflex\LaravelPresenter\Console\PresenterMakeCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Coderflex\LaravelPresenter\Console\PresenterMakeCommand;
 
 class LaravelPresenterServiceProvider extends PackageServiceProvider
 {

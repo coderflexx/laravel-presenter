@@ -27,4 +27,3 @@ abstract class Presenter
         return null;
     }
 }
-
