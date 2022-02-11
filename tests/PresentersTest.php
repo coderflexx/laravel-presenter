@@ -49,7 +49,6 @@ it('throws an exception if the presenter type does not exists', function () {
     ]);
 
     $user->present('profile')->lang;
-
 })->throws(
     Coderflex\LaravelPresenter\Exceptions\PresenterException::class,
     'Presenter not found'
