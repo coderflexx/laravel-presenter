@@ -8,7 +8,7 @@ class PresenterMakeCommand extends GeneratorCommand
 {
     public $name = 'presenter:make';
 
-    public $description = 'create a new  presenter';
+    public $description = 'create a new presenter class';
 
     /**
      * The type of class being generated.
