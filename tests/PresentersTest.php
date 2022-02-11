@@ -40,6 +40,21 @@ it('presents user lang from another presenter type', function () {
         ->toEqual('en');
 })->group('Presenter Implementation');
 
+it('throws an exception if the presenter type does not exists', function () {
+    $user = new User([
+        'first_name' => 'John',
+        'last_name' => 'Doe',
+        'email' => 'john@example.com',
+        'password' => '123',
+    ]);
+
+    $user->present('profile')->lang;
+
+})->throws(
+    Coderflex\LaravelPresenter\Exceptions\PresenterException::class,
+    'Presenter not found'
+)->group('Presenter Implementation');
+
 it('should implements CanPresent Interface', function () {
     $post = new Post([
             'title' => 'a title for a post',
