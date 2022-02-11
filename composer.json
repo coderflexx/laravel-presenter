@@ -1,12 +1,12 @@
 {
-    "name": "coderflexx/laravel-presenter",
+    "name": "coderflex/laravel-presenter",
     "description": "Write Clean/Reusable Code with Presenters.",
     "keywords": [
         "coderflex",
         "laravel",
         "laravel-presenter"
     ],
-    "homepage": "https://github.com/coderflex/laravel-presenter",
+    "homepage": "https://github.com/coderflexx/laravel-presenter",
     "license": "MIT",
     "authors": [
         {
