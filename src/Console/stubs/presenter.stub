@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Presenters;
+
+use Illuminate\Database\Eloquent\Model;
+use Coderflex\LaravelPresenter\Presenter;
+
+class {{ class }} extends Presenter
+{
+    //
+}
