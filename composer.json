@@ -53,10 +53,7 @@
         "laravel": {
             "providers": [
                 "Coderflex\\LaravelPresenter\\LaravelPresenterServiceProvider"
-            ],
-            "aliases": {
-                "LaravelPresenter": "Coderflex\\LaravelPresenter\\Facades\\LaravelPresenter"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
