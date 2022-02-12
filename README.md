@@ -225,7 +225,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Ousid](https://github.com/coderflexx)
+- [Coderflex](https://github.com/coderflexx)
 - [All Contributors](../../contributors)
 
 ## License
