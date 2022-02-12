@@ -130,7 +130,7 @@ class User extends Authenticatable implements CanPresent
 By default, the type of your presenter class is `default`, but you can use as many of presenters you want, just by identifying the type in `$presenters` property.
 
 ## Example
-Now, after we generated the `presenter` class, and we implemented it successfully in our model, we can use it as so:
+Now, after we generated the `presenter` class, and we implemented it successfully in our model, we can use it like so:
 
 In your `UserPresenter` class or any presenter class you generated.
 
@@ -225,7 +225,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Coderflex](https://github.com/coderflexxx)
+- [Ousid](https://github.com/coderflexx)
 - [All Contributors](../../contributors)
 
 ## License
