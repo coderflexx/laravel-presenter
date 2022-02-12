@@ -1,8 +1,8 @@
 # Laravel Presenter
 
-[![The Latest Version on Packagist](https://img.shields.io/packagist/v/coderflex/laravel-presenter.svg?style=flat-square)](https://packagist.org/packages/coderflex/laravel-presenter)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/coderflex/laravel-presenter/run-tests?label=tests)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/coderflex/laravel-presenter/Check%20&%20fix%20styling?label=code%20style)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![The Latest Version on Packagist](https://img.shields.io/packagist/v/coderflexx/laravel-presenter.svg?style=flat-square)](https://packagist.org/packages/coderflexx/laravel-presenter)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/coderflexx/laravel-presenter/run-tests?label=tests)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/coderflexx/laravel-presenter/Check%20&%20fix%20styling?label=code%20style)](https://github.com/coderflexx/laravel-presenter/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 
 A clean way to present your model attributes without putting them in the wrong file.
 
@@ -11,7 +11,7 @@ A clean way to present your model attributes without putting them in the wrong f
 You can install the package via composer:
 
 ```bash
-composer require coderflex/laravel-presenter
+composer require coderflexx/laravel-presenter
 ```
 
 You can publish the config file with:
