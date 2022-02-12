@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-presenter` will be documented in this file.
 
+## v1.0.4 - 2022-02-12
+
+# Update
+
+- Update `README.md`
+
 ## v1.0.3 - 2022-02-12
 
 # Update
