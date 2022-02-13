@@ -28,10 +28,11 @@ class PresenterException extends Exception
      */
     public static function interfaceNotImplemented(Model $model): self
     {
-        return new self((__(':model should implements :interface interface', [
+        return new self((
+            __(':model should implements :interface interface', [
                         'model' => get_class($model),
                         'interface' => '\Coderflex\LaravelPresenter\Concerns\CanPresent',
                     ])
-                ));
+        ));
     }
 }
