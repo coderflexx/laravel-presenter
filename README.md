@@ -17,7 +17,7 @@ composer require coderflexx/laravel-presenter
 You can publish the config file with:
 
 ```bash
-vendor:publish --provider="Coderflex\LaravelPresenter\LaravelPresenterServiceProvider"
+php artisan vendor:publish --provider="Coderflex\LaravelPresenter\LaravelPresenterServiceProvider"
 ```
 
 This is the contents of the published config file:
