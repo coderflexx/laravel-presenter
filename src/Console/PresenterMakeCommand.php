@@ -6,9 +6,9 @@ use Illuminate\Console\GeneratorCommand;
 
 class PresenterMakeCommand extends GeneratorCommand
 {
-    public $name = 'presenter:make';
+    public $name = 'make:presenter';
 
-    public $description = 'create a new presenter class';
+    public $description = 'Create a new presenter class';
 
     /**
      * The type of class being generated.
