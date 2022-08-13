@@ -4,7 +4,7 @@ namespace Coderflex\LaravelPresenter\Console;
 
 use Illuminate\Console\GeneratorCommand;
 
-class PresenterMakeCommand extends GeneratorCommand
+class OldPresenterMakeCommand extends GeneratorCommand
 {
     public $name = 'presenter:make';
 
