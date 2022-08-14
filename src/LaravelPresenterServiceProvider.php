@@ -3,8 +3,8 @@
 namespace Coderflex\LaravelPresenter;
 
 use Coderflex\LaravelPresenter\Console\{
-    PresenterMakeCommand,
-    MakePresenterCommand
+    MakePresenterCommand,
+    PresenterMakeCommand
 };
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
