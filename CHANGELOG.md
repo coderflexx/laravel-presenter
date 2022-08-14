@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-presenter` will be documented in this file.
 
+## V1.2.0 - 2022-08-14
+
+### What's Changed
+
+- Change Command Name and fix Typo by @syntafin in https://github.com/coderflexx/laravel-presenter/pull/6
+
+### New Contributors
+
+- @syntafin made their first contribution in https://github.com/coderflexx/laravel-presenter/pull/6
+
+**Full Changelog**: https://github.com/coderflexx/laravel-presenter/compare/v1.1.1...v1.2.0
+
 ## v1.1.1 - 2022-02-13
 
 ## Add
