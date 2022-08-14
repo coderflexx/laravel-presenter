@@ -48,7 +48,14 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin-laravel": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true,
+            "phpstan/phpstan-deprecation-rules": true,
+            "phpstan/phpstan-phpunit": true
+        }
     },
     "extra": {
         "laravel": {
