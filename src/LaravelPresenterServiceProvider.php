@@ -2,7 +2,10 @@
 
 namespace Coderflex\LaravelPresenter;
 
-use Coderflex\LaravelPresenter\Console\PresenterMakeCommand;
+use Coderflex\LaravelPresenter\Console\{
+    PresenterMakeCommand,
+    MakePresenterCommand
+};
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -18,6 +21,7 @@ class LaravelPresenterServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-presenter')
             ->hasConfigFile('laravel-presenter')
+            ->hasCommand(MakePresenterCommand::class)
             ->hasCommand(PresenterMakeCommand::class);
     }
 }
