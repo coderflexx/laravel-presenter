@@ -16,6 +16,12 @@ it('can create new presenter class', function () {
         ->assertExitCode(0);
 })->group('Presenter Command');
 
+
+it('can create new presenter class with the alias command', function () {
+    $this->artisan('make:presenter UserPresenter')
+        ->assertExitCode(0);
+})->group('Presenter Command');
+
 it('presents user full name', function () {
     $user = new User([
         'first_name' => 'John',
