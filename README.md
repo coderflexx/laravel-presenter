@@ -6,6 +6,22 @@
 
 A clean way to present your model attributes without putting them in the wrong file.
 
+
+- [Laravel Presenter](#laravel-presenter)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Model Implementation](#model-implementation)
+  - [Create New Model Presenter class](#create-new-model-presenter-class)
+  - [Using the `Presenter` Generated Class](#using-the-presenter-generated-class)
+  - [Example](#example)
+  - [Adding Another Presenter Type](#adding-another-presenter-type)
+  - [Testing](#testing)
+  - [Changelog](#changelog)
+  - [Contributing](#contributing)
+  - [Security Vulnerabilities](#security-vulnerabilities)
+  - [Credits](#credits)
+  - [License](#license)
+
 ## Installation
 
 You can install the package via composer:
@@ -155,8 +171,8 @@ $user->present()->fullName
 ```
 Your application will show the full name from the method you added.
 
-## Adding Another Presenter Type:
-Like I said above, by default the type will be `deafult` but, you can add more types as you need.
+## Adding Another Presenter Type
+Like I said above, by default the type will be `default` but, you can add more types as you need.
 
 Here is an example:
 
