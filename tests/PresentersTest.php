@@ -4,6 +4,10 @@ use Coderflex\LaravelPresenter\Tests\Models\Post;
 use Coderflex\LaravelPresenter\Tests\Models\User;
 
 it('cannot create new presenter without a name argument', function () {
+    $this->markTestSkipped(
+        __('In laravel V9.*, and above versions, it can put a question for the name argument, if it\'s not presented.')
+    );
+
     $this->artisan('presenter:make ')
         ->assertExitCode(1);
 })->throws(
