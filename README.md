@@ -111,7 +111,7 @@ If you want to change the directory, you have two options.
 First options is to set the full namespace while you're creating the presenter class
 
 ```bash
-php artisna presneter:make App\Models\Presenter\UserPresenter
+php artisan presneter:make App\Models\Presenter\UserPresenter
 ```
 
 Or change `presenter_namespace` from `config/laravel-presenter` file.

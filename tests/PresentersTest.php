@@ -1,5 +1,6 @@
 <?php
 
+use Coderflex\LaravelPresenter\Tests\Models\Item;
 use Coderflex\LaravelPresenter\Tests\Models\Post;
 use Coderflex\LaravelPresenter\Tests\Models\User;
 
@@ -74,3 +75,21 @@ it('should implements CanPresent Interface', function () {
     Coderflex\LaravelPresenter\Exceptions\PresenterException::class,
     'Coderflex\LaravelPresenter\Tests\Models\Post should implements \Coderflex\LaravelPresenter\Concerns\CanPresent interface'
 )->group('Presenter Implementation');
+
+it('can automatically load the presenter', function () {
+    $item = new Item([
+        'title' => 'An item title',
+    ]);
+
+    expect($item->present()->slug)
+        ->toEqual('an-item-title');
+});
+
+it('can automatically load a non-default presenter', function () {
+    $item = new Item([
+        'title' => 'An item title',
+    ]);
+
+    expect($item->present('subdomain')->caps)
+        ->toEqual('AN ITEM TITLE');
+});
