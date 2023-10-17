@@ -28,14 +28,14 @@ trait UsesPresenters
     {
         $presenter = $this->getDefaultPresenterName($type);
 
-        if (! is_null($this->presenters) && is_array($this->presenters)) {
-            if (array_key_exists($type, $this->presenters)) {
-                $presenter = $this->presenters[$type];
-            } else {
-                throw new PresenterException();
-            }
+        if (
+            is_array($this->presenters) &&
+            array_key_exists($type, $this->presenters ?? [])
+        ) {
+            $presenter = $this->presenters[$type];
+        }
 
-        } elseif (isset($this->presenter) && is_string($this->presenter)) {
+        if (is_string($this->presenter ?? null)) {
             $presenter = $this->presenter;
         }
 
