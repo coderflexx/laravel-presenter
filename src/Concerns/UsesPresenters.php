@@ -3,6 +3,7 @@
 namespace Coderflex\LaravelPresenter\Concerns;
 
 use Coderflex\LaravelPresenter\Exceptions\PresenterException;
+use Illuminate\Support\Str;
 
 /**
  * Uses Presenters Trait
@@ -61,7 +62,7 @@ trait UsesPresenters
     {
         $modelNameModifier = $type === 'default' ? '' : $type;
 
-        return str(get_class())
+        return Str::of(get_class())
             ->replace('Models', 'Presenters')
             ->append(str($modelNameModifier)->ucfirst())
             ->append('Presenter')

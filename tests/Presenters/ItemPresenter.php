@@ -5,11 +5,12 @@ namespace Coderflex\LaravelPresenter\Tests\Presenters;
 ;
 
 use Coderflex\LaravelPresenter\Presenter;
+use Illuminate\Support\Str;
 
 class ItemPresenter extends Presenter
 {
     public function slug()
     {
-        return str($this->model->title)->slug()->toString();
+        return Str::of($this->model->title)->slug()->toString();
     }
 }

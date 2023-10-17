@@ -5,11 +5,12 @@ namespace Coderflex\LaravelPresenter\Tests\Presenters;
 ;
 
 use Coderflex\LaravelPresenter\Presenter;
+use Illuminate\Support\Str;
 
 class ItemSubdomainPresenter extends Presenter
 {
     public function caps()
     {
-        return str($this->model->title)->upper()->toString();
+        return Str::of($this->model->title)->upper()->toString();
     }
 }
