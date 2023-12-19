@@ -84,7 +84,7 @@ class User extends Authenticatable implements CanPresent
 This package gives you an easy way to generate new `Presenter` class, all you need to do is to use `presenter:make` command.
 
 ```bash
-php artisan presenter:make UserPresneter
+php artisan presenter:make UserPresenter
 ```
 
 `UserPresenter` in our case, leaves by default in `App\Presenters`.
@@ -111,7 +111,7 @@ If you want to change the directory, you have two options.
 First options is to set the full namespace while you're creating the presenter class
 
 ```bash
-php artisna presneter:make App\Models\Presenter\UserPresenter
+php artisna presenter:make App\Models\Presenter\UserPresenter
 ```
 
 Or change `presenter_namespace` from `config/laravel-presenter` file.
