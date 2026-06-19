@@ -6,7 +6,7 @@ class PresenterMakeCommand extends MakePresenterCommand
 {
     public $name = 'presenter:make';
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->setHidden(true);
     }
